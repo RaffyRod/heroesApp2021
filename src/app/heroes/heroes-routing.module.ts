@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ListadoComponent } from './pages/listado/listado.component';
 import { AgregarComponent } from './pages/agregar/agregar.component';
 import { BuscarComponent } from './pages/buscar/buscar.component';
 import { HeroeComponent } from './pages/heroe/heroe.component';
+import { ListadoComponent } from './pages/listado/listado.component';
 import { HomeComponent } from './pages/home/home.component';
 
 
@@ -32,6 +32,9 @@ import { HomeComponent } from './pages/home/home.component';
   imports: [
     RouterModule.forChild( routes )
 
+  ],
+  exports:[
+    RouterModule   //siempre exportar el module
   ]
 })
 export class HeroesRoutingModule { }
