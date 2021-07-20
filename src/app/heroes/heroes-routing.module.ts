@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 import { ListadoComponent } from './pages/listado/listado.component';
 import { AgregarComponent } from './pages/agregar/agregar.component';
 import { BuscarComponent } from './pages/buscar/buscar.component';
@@ -7,7 +7,7 @@ import { HeroeComponent } from './pages/heroe/heroe.component';
 
 
 
-  const router : Routes = [
+  const routes : Routes = [
     {
         path: '',
         children: [
@@ -27,6 +27,7 @@ import { HeroeComponent } from './pages/heroe/heroe.component';
 @NgModule({
   declarations: [],
   imports: [
+    RouterModule.forChild( routes )
 
   ]
 })
